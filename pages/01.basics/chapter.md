@@ -11,7 +11,13 @@ child_type: docs
 
 Here you **learn** everything about our vision
 
-Cosmos is a decentralized network of independent parallel blockchains, each powered by classical BFT consensus algorithms like Tendermint.
+Simulation Platform is an empowring environment with collection of tools to enable people to ideate, simulate and build anything.
+This Platform uses decentralized networks of connected computeblocks running on highly secured platforms.
+
+Intention is to build next generation build and test platform 
+that is visually rich and highly intutive to humans. 
+
+
 
 The first blockchain in the Cosmos Network is the Cosmos Hub, whose native token is the Atom. Cosmos is a permission-less network, meaning that anybody can build a blockchain on it.
 
