@@ -9,8 +9,6 @@ child_type: docs
 
 # Welcome to the Simulation Platform!
 
-Here you **learn** everything about our vision
-
 Simulation Platform is an empowring environment with collection of tools to enable people to ideate, simulate and build anything.
 This Platform uses decentralized networks of connected computeblocks running on highly secured platforms.
 
