@@ -5,8 +5,8 @@ taxonomy:
 child_type: docs
 ---
 
-### Chapter 1
+### Introduction
 
-# Introduction
+# Welcome to the iBot Framework!
 
-Discover the **basic** principles
+Here you **learn** everything about iBot Framework
