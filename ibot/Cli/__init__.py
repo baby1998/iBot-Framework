@@ -20,6 +20,10 @@ def statelessCall():
 def parse(command):
 	lexer = Lexer(command)
 	lexer.parseStrings()
-	print(lexer.strings)
+	lexer.parseArgs()
+	lexer.parseFunc()
+	print("Strings: " + str(lexer.strings))
+	print("Arguments: " + str(lexer.arguments))
+	print("Functions: " + str(lexer.function))
 	# importlib.import_module('Cli' + lexer['order'])
 	# return Command() # returns an understandable command object
