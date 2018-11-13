@@ -1,11 +1,18 @@
 #!/usr/bin/env python
 
-import ibot.Cli
+from ibot import Cli
+import sys
 
 if (__name__ == '__main__'):
     try:
-        cli = Cli()
+        if(len(sys.argv) > 1):
+        	# Cli 
+        	Cli.statelessCall()
+        	exit()
+
+        # REPL
         while(True):
-            ibot.cli.parse(input("> "))
+        	Cli.statefulCall()
+
     except KeyboardInterrupt:
         exit()
