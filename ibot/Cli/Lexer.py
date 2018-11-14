@@ -61,3 +61,10 @@ class Lexer:
 			self.function = []
 
 		return self.function
+
+
+	def parse(self):
+		self.parseStrings()
+		self.parseArgs()
+		self.parseFunc()
+		return self
