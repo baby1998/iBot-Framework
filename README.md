@@ -12,13 +12,14 @@ There are two types of bots possible in bot framework…
 
 1. Databot
 2. Metabot
+
 you can think Databot as Atom and Metabot as Molecule…
 
 Databots:
-Databots are the smallest entity and identify with single piece of information. They learn and store all their past interactions in their memory and build their awareness around it. They also understand their function. They have Interfaces interact with other bots as well as input and output interfaces to be used with graph systems.
+Databots are the smallest entity and identify with single piece of information. They learn and store all their past interactions in their memory and build their awareness around it. They also understand their function. They have Interfaces interact with other bots as well as input and output interfaces.
 
 Metabots:
-They identify with collection of bots nesting to carry out specific functions. They too learn and store all their past interactions in their memory and build awareness. They also understand their function. They too have Interfaces but they also have children interfaces from collection bots inside, they too have input and output interfaces to be used with graph systems.
+They identify with collection of bots nesting to carry out specific functions. They too learn and store all their past interactions in their memory and build awareness. They also understand their function. They too have Interfaces but they also have children interfaces from collection bots inside.
 
 Bots Memory and Awareness Functions
 Memory function is a part of bots cognition. Each bot have their own memory space, bots sense any change in their state. There are primarily 2 types detection mechanism. Temporal, Contextual but there can be more custom form of awareness like Relational. And these detection pattern collected over time is called awareness. These awarenesses differ in function from each other but can also work together to improve it own own function. For example Contextual awareness could ask temporal awareness to review and build certain type of context for itself or improve some of its existing context…
