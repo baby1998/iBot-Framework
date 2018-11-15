@@ -32,12 +32,7 @@ However each bot can have different flavours. There's no limit in flavours :)
 
 All bots are spawed as databot. 
 If a bot contains a single piece of information then it databot. Databot handles the real data.
-Metabots contain other databots and metabots. Metabots on their own do not work with real data, they have to have at least 1 databot in them. 
-
-***For example:***
-
-Firstname, Lastname, Phone, City are a databots. 
-Person is a Merabot that contains above databots. 
+Metabots contain other databots and metabots. Metabots on their own do not work with real data, they have to have at least 1 databot in them. For example: Firstname, Lastname, Phone, City are a databots. Person is a Merabot that contains above databots. 
 
 ***here’s a fun analogy,***
 
@@ -69,6 +64,7 @@ Person, Customer, Google, Bank, Moster, Analyst, Mars, Bike etc.. it could be an
 
 
 **What kind of awareness bots have?**
+
 All bots are born with 3 basic types of awareness.
 - Temporal awareness
 - Contextual awareness
