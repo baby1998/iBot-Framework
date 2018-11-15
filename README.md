@@ -26,9 +26,9 @@ Yes, there are just 2 types of bots.
 - Databot 
 - Metabot
 
-However each bot can have different flavours. There's no limit in favors :)
+However each bot can have different flavours. There's no limit in flavours :)
 
-**What's difference between Databot and Metabot and flavours?**
+**What's difference between Databot and Metabot?**
 
 To make it simple, Let's use an analogy,
 Think of Databot as Atom and Metabot as Molecule.
