@@ -11,7 +11,7 @@ iBot Framework is a pocket universe consists of all bots. Like our universe, bot
 
 **What is a bot?**
 
-Bot is a smart software agent contained in a box. This could be either a literal box or abstract box. 
+Bot is a smart software agent contained in a box. 
 
 **How does a bot get smart?**
 
