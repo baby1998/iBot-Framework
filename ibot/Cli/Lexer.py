@@ -40,7 +40,6 @@ class Lexer:
 				if(isnumeric(i)):
 					return strings[i]
 			return x
-
 		self.arguments = list(map(restoreStrings, arguments))
 
 		return self.arguments
@@ -54,12 +53,7 @@ class Lexer:
 		for string in strings:
 			command.replace(string, "|")
 
-		self.function = [command.split(" ")[0]] # first word is always a function or argument.
-
-		if (not self.function[0].isalnum() or not self.function[0][0].isalpha()):
-			# non alphanumerics are not function
-			self.function = []
-
+		self.function = [command.split(" ")[0]] # first word is always a function.
 		return self.function
 
 

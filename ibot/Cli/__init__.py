@@ -2,7 +2,8 @@ import click
 import importlib
 from .Lexer import Lexer
 from .Command import Command
-from .ActionCommands import *
+from .Types.Number import Number
+# from .ActionCommands import *
 
 def statefulCall():
 	# stateful interface to the core
@@ -11,7 +12,7 @@ def statefulCall():
 		# given input is understandable command so run it.
 		command.run()
 	else:
-		if len(command):
+		if command:
 			print(command[0])
     
 
@@ -31,17 +32,26 @@ def parse(command):
 	if len(lexer.function):
 		if len(lexer.arguments):
 			for argument in lexer.arguments:
-				if(argument.isnumeric()):
-					# make number
-					pass
-				elif(argument in lexer.strings):
-					# use as string
-					pass
-				else:
-					# anything else must be processed as a command again
-					parse(argument).run()
-	try:
-		mod = importlib.import_module('ibot.Cli.ActionCommands.' + lexer.function[0].title())
-		return getattr(mod, lexer.function[0].title())()
-	except ImportError:
-	 	return [lexer.function[0] + " is not a valid command."]
+				newCommand = parse(argument)
+				if(isinstance(newCommand, Command)):
+					newCommand.run()
+
+		if(lexer.function[0].isnumeric()):
+			return Number(lexer.function[0])
+
+		elif(lexer.function[0] in lexer.strings):
+			return String(lexer.function[0])
+
+		# else:
+		# 	if(isinstance(newCommand, Command)):
+		# 		newCommand.run()
+		# 	# anything else must be processed as a command again
+		# 	newCommand = parse(lexer.function[0])
+
+	if lexer.function:
+		try:
+			mod = importlib.import_module('ibot.Cli.ActionCommands.' + lexer.function[0].title())
+			return getattr(mod, lexer.function[0].title())()
+		except ImportError:
+			return [lexer.function[0] + " is not a valid command."]
+		return []
