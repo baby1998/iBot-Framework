@@ -18,7 +18,7 @@ def statefulCall():
 def statelessCall():
 	# stateless interface to the core
 	# do click stuff here.
-	pass	
+	pass
 
 
 def parse(command):
@@ -39,32 +39,9 @@ def parse(command):
 					pass
 				else:
 					# anything else must be processed as a command again
-					parse(argument)
-
-	mod = importlib.import_module('ibot.Cli.ActionCommands.' + lexer.function[0].title())
-	return getattr(mod, lexer.function[0].title())()
+					parse(argument).run()
 	try:
-		# if len(lexer.arguments):
-		# 	# parse operators and solve arguments
-		# 	for argument in lexer.arguments:
-		# 		# is a number
-		# 		if(argument.isnumeric()):
-		# 			parse(getattr(importlib.import_module('ibot.Cli.Types.Number'), 'Number')(argument))
-
-		if len(lexer.function):
-			# call a function
-			mod = importlib.import_module('ibot.Cli.ActionCommands.' + lexer.function[0].title())
-			return getattr(mod, lexer.function[0].title())()
-
-		# elif len(lexer.arguments):
-		# 	# parse operators and solve arguments
-		# 	for argument in lexer.arguments:
-		# 		if (argument.isnumeric()):
-		# 		# is a number
-		# 			return getattr(importlib.import_module('ibot.Cli.Types.Number'), 'Number')(argument)
-		# 	pass
-
+		mod = importlib.import_module('ibot.Cli.ActionCommands.' + lexer.function[0].title())
+		return getattr(mod, lexer.function[0].title())()
 	except ImportError:
-		return [lexer.function[0] + " is not a valid command."]
-
-	return []
+	 	return [lexer.function[0] + " is not a valid command."]
